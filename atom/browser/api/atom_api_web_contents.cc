@@ -1149,7 +1149,7 @@ void WebContents::DownloadURL(const GURL& url) {
       content::BrowserContext::GetDownloadManager(browser_context);
 
   download_manager->DownloadUrl(
-      content::DownloadUrlParameters::CreateForWebContentsMainFrame(
+      download::DownloadUrlParameters::CreateForWebContentsMainFrame(
           web_contents(), url, NO_TRAFFIC_ANNOTATION_YET));
 }
 
