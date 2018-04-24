@@ -35,6 +35,8 @@ FrameSubscriber::FrameSubscriber(v8::Isolate* isolate,
   video_capturer_->Start(std::move(consumer));
 }
 
+FrameSubscriber::~FrameSubscriber() = default;
+
 void FrameSubscriber::OnFrameCaptured(
     mojo::ScopedSharedBufferHandle buffer,
     uint32_t buffer_size,
